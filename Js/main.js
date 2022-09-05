@@ -249,6 +249,7 @@ console.log(howMuchILoveYou(6))
 //       5: "madly"
 //     }
 //     return phrase[nbPetals%6]
-//     }
+// }
+// howMuchILoveYou(6)
 
 
