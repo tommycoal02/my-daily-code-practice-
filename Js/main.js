@@ -250,6 +250,23 @@ console.log(howMuchILoveYou(6))
 //     }
 //     return phrase[nbPetals%6]
 // }
-// howMuchILoveYou(6)
+// howMuchILoveYo
 
+///////////////////////////////////////////////////////////////////
+
+// question 
+// Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+
+// [Make sure you type the exact thing I wrote or the program may not execute properly]
+
+// answer
+
+document.querySelector('h1').addEventListener('click', greet)
+
+function greet(name){
+    //your code here
+    //   name = document.querySelector('input').value
+    return (`Hello, ${name} how are you doing today?`)
+}
+greet('laye')
 
