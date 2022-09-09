@@ -261,12 +261,26 @@ console.log(howMuchILoveYou(6))
 
 // answer
 
-document.querySelector('h1').addEventListener('click', greet)
+// document.querySelector('h1').addEventListener('click', greet)
 
-function greet(name){
-    //your code here
-    //   name = document.querySelector('input').value
-    return (`Hello, ${name} how are you doing today?`)
+// function greet(name){
+//     //your code here
+//     //   name = document.querySelector('input').value
+//     return (`Hello, ${name} how are you doing today?`)
+// }
+// greet('laye')
+
+////////////////////////////////////////
+
+// question
+
+// answer
+function boolToWord( booling){
+  //...
+  if(booling ){
+    return 'Yes'
+  }else{
+    return 'No'
+  }
 }
-greet('laye')
-
+console.log(boolToWord(5))
