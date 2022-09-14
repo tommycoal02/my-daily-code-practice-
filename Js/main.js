@@ -115,10 +115,10 @@ console.log('we are winners')
 // =======
 // answer
 // =====
-// function noSpace(str){
-//     return str = str.replace(/\s/g, '');
-// }
-// console.log(noSpace('sd sddf'))
+function noSpace(str){
+    return str = str.replace(/\s/g, '');
+}
+(noSpace('sd sddf'))
 
 
 // ======================================
@@ -128,40 +128,40 @@ console.log('we are winners')
 
 // answwer  -----------
 
-// function nearestSq(n){
-//     // your code
-//   n = Math.round(Math.sqrt(n))
-//   return Math.pow(n, 2)
-// }
-// console.log(nearestSq(33))
+function nearestSq(n){
+    // your code
+  n = Math.round(Math.sqrt(n))
+  return Math.pow(n, 2)
+}
+(nearestSq(33))
 
 // ================
 
 
 
 // for removal of space in an array 
-// function sumMix(x){
-// //    let x = [1,'3','12', 2]
-//     let sum = x.reduce(function(a, b) { return a + b; }, 0);
-//     console.log(sum)
-// }
-// sumMix([1,'3','12', 2])
+function sumMix(x){
+//    let x = [1,'3','12', 2]
+    let sum = x.reduce(function(a, b) { return a + b; }, 0);
+    console.log(sum)
+}
+sumMix([1,'3','12', 2])
 
 
 // ================================h ===
-// function reverseWords(str) {
-//     return str.split("").reverse().join("").split(" ").reverse().join(" ")
-//     }
-//     console.log(reverseWords('IM THE MAN guyyyyy'))
+function reverseWords(str) {
+    return str.split("").reverse().join("").split(" ").reverse().join(" ")
+    }
+    console.log(reverseWords('IM THE MAN guyyyyy'))
     
-//     function createPhoneNumber(n){
-//         // let result = numbers.map(i=>Number(i));
-//        const result = n.toString().split(',').join("-")
-//         // console.log(result.toString(''))
-//         return result
+    function createPhoneNumber(n){
+        // let result = numbers.map(i=>Number(i));
+       const result = n.toString().split(',').join("-")
+        // console.log(result.toString(''))
+        return result
         
-//     }
-//     console.log(createPhoneNumber(['1,2,3,4,5,6,7,8,9']))
+    }
+    console.log(createPhoneNumber(['1,2,3,4,5,6,7,8,9']))
 
 
 // PREP way of answering questions from today
@@ -261,14 +261,14 @@ console.log(howMuchILoveYou(6))
 
 // answer
 
-// document.querySelector('h1').addEventListener('click', greet)
+document.querySelector('h1').addEventListener('click', greet)
 
-// function greet(name){
-//     //your code here
-//     //   name = document.querySelector('input').value
-//     return (`Hello, ${name} how are you doing today?`)
-// }
-// greet('laye')
+function greet(name){
+    //your code here
+      name = document.querySelector('input').value
+    return (`Hello, ${name} how are you doing today?`)
+}
+greet('laye')
 
 ////////////////////////////////////////
 
@@ -284,3 +284,25 @@ function boolToWord( booling){
   }
 }
 console.log(boolToWord(5))
+
+
+
+/////////// question//////////////////////////
+// This time no story, no theory. The examples below show you how to write function 
+function accum(s){
+    arr = []
+    for(let i=0; i<s.length; i++){
+        console.log(arr.push(s.charAt(i).toUpperCase() + s.charAt(i).toLowerCase().repeat(i)))
+    }
+    return arr.join("-")
+}
+
+function accum(s){
+    return s.split('').map((acc,i) => (acc.toUpperCase() + acc.toLowerCase().repeat(i))).join('-')
+}
+console.log(accum("abcde"))
+
+
+// ========================================
+
+
