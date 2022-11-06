@@ -289,20 +289,139 @@ console.log(boolToWord(5))
 
 /////////// question//////////////////////////
 // This time no story, no theory. The examples below show you how to write function 
-function accum(s){
-    arr = []
-    for(let i=0; i<s.length; i++){
-        console.log(arr.push(s.charAt(i).toUpperCase() + s.charAt(i).toLowerCase().repeat(i)))
-    }
-    return arr.join("-")
-}
+// function accum(s){
+//     arr = []
+//     for(let i=0; i<s.length; i++){
+//         console.log(arr.push(s.charAt(i).toUpperCase() + s.charAt(i).toLowerCase().repeat(i)))
+//     }
+//     return arr.join("-")
+// }
 
-function accum(s){
-    return s.split('').map((acc,i) => (acc.toUpperCase() + acc.toLowerCase().repeat(i))).join('-')
-}
-console.log(accum("abcde"))
+// function accum(s){
+//     // return s.split('').map((acc,i) => (acc.toUpperCase() + acc.toLowerCase().repeat(i))).join('-')
+//     return s.split("").map((acc,i) => (acc.toUpperCase() + acc.toLowerCase().repeat(i))).join("-")
+// }
+// (accum("abcde"))
 
 
 // ========================================
 
+// QUESTION
+// Write a function that returns a sequence (index begins with 1) of all the even characters from a string. If the string is smaller than two characters or longer than 100 characters, the function should return "invalid string".
+
+// For example:
+
+// "abcdefghijklm" --> ["b", "d", "f", "h", "j", "l"]
+// "a"             --> "invalid string"
+
+
+// Answer 
+// ////
+// function evenChars(string){
+//     // keep coding!
+//    let strin = string.split('')
+//     if(string.length >= 100 || string.length <= 2){
+//         return ('invalid string')
+//     }else {
+//         let arr = []
+//         string.forEach(e =>{
+//             if(e % 2 == 0){
+//                 arr.push(e)
+//             }
+//         })
+//     }
+//     return arr
+
+// }
+// console.log(evenChars('12345678912345612'))
+// function evenChars(string){
+//     //keep coding!
+//     if(string.length >= 100 || string.length <= 2){
+//         return ('invalid string')
+//     }else{
+//         let arr = []
+//         // string.forEach(e =>{
+//         //     if(e % 2 === 0){
+//         //         arr.push(e)
+//         //     }
+//         // })
+//         // return arr 
+//         for(let i=1; i< string.length; i++){
+//             if(string){
+                
+//             }
+//         }
+//     }
+// }
+// console.log(evenChars("12345678"))
+
+
+// function evenChars(string){
+//     let splittedString = string.split('')
+//     // console.log(splittedString)
+//     if(string.length > 100 || string.length < 2){
+//         return ("invalid string")
+//     }else{
+//         // let arr = []
+//         for(let i=1; i<= splittedString.length; i++){
+//             if(i % 2 === 0){
+//                 console.log(i)
+//                 // arr.push(i)
+//             }
+//             // console.log(arr)
+//         }
+//     }
+// }
+// evenChars('123479492')
+function evenChars(string){
+    let splittedString = string.split('')
+    // console.log(splittedString)
+    if(string.length > 100 || string.length < 2){
+        return ("invalid string")
+    }else{
+        // let arr = []
+        for(let i=1; i<= string.length; i++){
+            // if(i % 2 === 0){
+            //     console.log(i)
+            //     // arr.push(i)
+            // }
+            // // console.log(arr)
+            return splittedString.filter((num) => num % 2 === 0);
+        }
+    }
+}
+evenChars('12343688')
+// actual solution/////
+// 1
+function evenChars(string) {
+    return (string.length < 2 || string.length > 100) ? "invalid string" : 
+    [...string].filter((x, i) => i % 2);
+  }
+
+//   2
+const evenChars = string =>
+  string.length < 2 || string.length > 100 ? `invalid string` : [...string].filter((_, idx) => idx % 2);
+
+//   3
+function evenChars(s) {
+    if(s.length<2 || s.length>100)
+      return "invalid string";
+    var output = [];
+    for(var i = 1; i<s.length; i+=2)
+    {
+      output.push(s[i]);
+    }
+    return output;
+  }
+// 4
+function evenChars(string) {
+    if (string.length < 2 | string.length > 100) {
+      return 'invalid string';
+    }
+    let result = [];
+    for (i = 1; i < string.length; i += 2) {
+      result.push(string[i]);
+    }
+    return result;
+  }
 
