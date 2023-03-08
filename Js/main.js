@@ -373,49 +373,43 @@ console.log(boolToWord(5))
 //     }
 // }
 // evenChars('123479492')
-function evenChars(string){
-    let splittedString = string.split('')
-    // console.log(splittedString)
-    if(string.length > 100 || string.length < 2){
-        return ("invalid string")
-    }else{
-        // let arr = []
-        for(let i=1; i<= string.length; i++){
-            // if(i % 2 === 0){
-            //     console.log(i)
-            //     // arr.push(i)
-            // }
-            // // console.log(arr)
-            return splittedString.filter((num) => num % 2 === 0);
-        }
-    }
-}
-evenChars('12343688')
+// function evenChars(string){
+//     if(string.length > 100 || string.length < 2){
+//         console.log ("invalid string")
+//     }else{
+//         let arr = []
+//         for(let i=1; i<= string.length; i+=2){
+//             arr.push(string[i])
+//         }
+//         console.log (arr);
+//     }
+// }
+// evenChars('11234569876544598761')
 // actual solution/////
 // 1
-function evenChars(string) {
-    return (string.length < 2 || string.length > 100) ? "invalid string" : 
-    [...string].filter((x, i) => i % 2);
-  }
+// function evenChars(string) {
+//     return (string.length < 2 || string.length > 100) ? "invalid string" : 
+//     [...string].filter((x, i) => i % 2);
+//   }
 
-//   2
-const evenChars = string =>
-  string.length < 2 || string.length > 100 ? `invalid string` : [...string].filter((_, idx) => idx % 2);
+// //   2
+// const evenChars = string =>
+//   string.length < 2 || string.length > 100 ? `invalid string` : [...string].filter((_, idx) => idx % 2);
 
-//   3
-function evenChars(s) {
-    if(s.length<2 || s.length>100)
-      return "invalid string";
-    var output = [];
-    for(var i = 1; i<s.length; i+=2)
-    {
-      output.push(s[i]);
-    }
-    return output;
-  }
-// 4
-function evenChars(string) {
-    if (string.length < 2 | string.length > 100) {
+// //   3
+// function evenChars(s) {
+//     if(s.length<2 || s.length>100)
+//       return "invalid string";
+//     var output = [];
+//     for(var i = 1; i<s.length; i+=2)
+//     {
+//       output.push(s[i]);
+//     }
+//     return output;
+//   }
+// // 4
+function evenChas(string) {
+    if (string.length < 2 || string.length > 100) {
       return 'invalid string';
     }
     let result = [];
@@ -424,4 +418,5 @@ function evenChars(string) {
     }
     return result;
   }
+  evenChas(22345)
 
